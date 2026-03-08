@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Discovery | Mariners Church Rooted</title>
+    <style>
+        :root { --mariners-navy: #004a99; --mariners-blue: #0076ce; --bg-gray: #f8f9fa; --text-dark: #1a1a1a; --border: #e0e0e0; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; color: var(--text-dark); }
+        .nav-bar { background: white; padding: 15px 10%; border-bottom: 1px solid #eee; text-align: left; position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: bold; font-size: 18px; letter-spacing: 2px; color: var(--mariners-navy); text-transform: uppercase; }
+        .hero { background: var(--mariners-navy); color: white; padding: 40px 10%; text-align: center; }
+        .container { max-width: 900px; margin: -20px auto 60px; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .scenario-block { margin-bottom: 35px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+        .scenario-header { font-size: 17px; font-weight: 600; color: var(--mariners-navy); margin-bottom: 12px; display: block; line-height: 1.4; }
+        .option-label { display: block; padding: 12px; margin-bottom: 8px; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; transition: 0.2s; font-size: 14px; }
+        .option-label:hover { background-color: #f0f7ff; border-color: var(--mariners-blue); }
+        .option-label input { margin-right: 12px; }
+        .submit-btn { background: var(--mariners-blue); color: white; padding: 20px 60px; border: none; border-radius: 40px; font-weight: bold; font-size: 16px; cursor: pointer; display: block; margin: 40px auto; text-transform: uppercase; width: 100%; max-width: 350px; }
+        
+        /* Results Styles */
+        #results-container { display: none; animation: fadeIn 0.8s; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 30px; }
+        .result-card { background: white; padding: 25px; border-radius: 12px; border: 1px solid #eef2f6; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .card-title { color: var(--mariners-navy); font-size: 16px; font-weight: bold; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .gift-row { margin-bottom: 20px; }
+        .gift-label { display: flex; justify-content: space-between; font-size: 13px; font-weight: bold; margin-bottom: 6px; }
+        .bar-bg { background: #e0e0e0; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 8px; }
+        .bar-fill { height: 100%; background: var(--mariners-navy); border-radius: 4px; transition: width 1.5s ease-in-out; }
+        .focus-tag { display: inline-block; background: #e3f2fd; color: var(--mariners-blue); padding: 4px 10px; border-radius: 15px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+        .insight-box { margin-top: 30px; border: 2px solid var(--mariners-navy); border-radius: 8px; padding: 25px; background-color: #fff; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar"><div class="logo">MARINERS CHURCH | ROOTED</div></div>
+<div class="hero"><h1>SPIRITUAL DISCOVERY</h1><p>Measuring internal activation over historical performance.</p></div>
+
+<div class="container">
+    <div id="quiz-view">
+        <form id="activationForm">
+            <div class="scenario-block">
+                <span class="scenario-header">1. A friend is facing a complex problem with no logical solution in sight.</span>
+                <label class="option-label"><input type="radio" name="q1" value="A" required> I offer to help them brainstorm practical steps and organize their thoughts.</label>
+                <label class="option-label"><input type="radio" name="q1" value="B"> I tell them I'll be praying for clarity and hope for them this week.</label>
+                <label class="option-label"><input type="radio" name="q1" value="C"> I find a specific insight or "download" for their situation coming to mind.</label>
+                <label class="option-label"><input type="radio" name="q1" value="D"> I listen empathetically but prefer to remain quiet to avoid giving the wrong advice.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">2. You notice a stranger in the church lobby who looks completely overwhelmed.</span>
+                <label class="option-label"><input type="radio" name="q2" value="A"> I look for a practical way to help, like offering directions or a hand with their bags.</label>
+                <label class="option-label"><input type="radio" name="q2" value="B"> I pray silently that God would give them peace and send the right person to help.</label>
+                <label class="option-label"><input type="radio" name="q2" value="C"> I feel a strong pull to walk over and pray with them right there on the spot.</label>
+                <label class="option-label"><input type="radio" name="q2" value="D"> I observe from a distance, assuming someone on staff or the welcome team will handle it.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">3. During worship, you sense a deep, heavy tension in the room that others don't seem to notice.</span>
+                <label class="option-label"><input type="radio" name="q3" value="A"> I focus on the lyrics and the music to help me push past the uncomfortable feeling.</label>
+                <label class="option-label"><input type="radio" name="q3" value="B"> I pray for those around me, asking for God’s peace to settle in the space.</label>
+                <label class="option-label"><input type="radio" name="q3" value="C"> I recognize a specific spiritual weight and internally command it to lift in Jesus' name.</label>
+                <label class="option-label"><input type="radio" name="q3" value="D"> I wait for the feeling to pass and continue following the service as usual.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">4. A conversation with a colleague turns toward deep personal pain they are experiencing.</span>
+                <label class="option-label"><input type="radio" name="q4" value="A"> I offer practical support, like a cup of coffee or taking something off their workload.</label>
+                <label class="option-label"><input type="radio" name="q4" value="B"> I listen carefully and ask if I can follow up with them later to see how they're doing.</label>
+                <label class="option-label"><input type="radio" name="q4" value="C"> I feel a surge of faith to pray for an immediate transformation in their situation.</label>
+                <label class="option-label"><input type="radio" name="q4" value="D"> I keep the conversation brief to avoid overstepping professional or social boundaries.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">5. You feel an internal "nudge" to give a specific amount of money to someone in need.</span>
+                <label class="option-label"><input type="radio" name="q5" value="A"> I check my budget to ensure I can give responsibly without affecting my obligations.</label>
+                <label class="option-label"><input type="radio" name="q5" value="B"> I pray that God would provide for their need through the church or other people.</label>
+                <label class="option-label"><input type="radio" name="q5" value="C"> I give it immediately, trusting that God will provide for my own needs afterward.</label>
+                <label class="option-label"><input type="radio" name="q5" value="D"> I dismiss the thought as a personal impulse rather than a spiritual prompting.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">6. Your Rooted group is stuck and can't decide on a location for a service project.</span>
+                <label class="option-label"><input type="radio" name="q6" value="A"> I offer to research and present the best three options based on cost and logistics.</label>
+                <label class="option-label"><input type="radio" name="q6" value="B"> I suggest we spend some time in prayer, waiting for a collective sense of peace.</label>
+                <label class="option-label"><input type="radio" name="q6" value="C"> I speak a creative, decisive solution that suddenly brings everyone into agreement.</label>
+                <label class="option-label"><input type="radio" name="q6" value="D"> I stay out of the debate and wait for the group leader to make the final call.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">7. You are praying and find yourself running out of English words to express your heart.</span>
+                <label class="option-label"><input type="radio" name="q7" value="A"> I sit in silence, allowing my mind to rest and reset before continuing.</label>
+                <label class="option-label"><input type="radio" name="q7" value="B"> I use a prayer book or recite familiar Scripture to help focus my thoughts.</label>
+                <label class="option-label"><input type="radio" name="q7" value="C"> I allow my spirit to pray in a way that feels unhindered by my natural language.</label>
+                <label class="option-label"><input type="radio" name="q7" value="D"> I finish my prayer time early, assuming I've said all I need to say for now.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">8. A friend tells you about a dream they had that feels spiritually significant to them.</span>
+                <label class="option-label"><input type="radio" name="q8" value="A"> I offer to help them look up biblical symbols or discuss the dream's themes.</label>
+                <label class="option-label"><input type="radio" name="q8" value="B"> I pray that God would bring them clarity on the meaning in His timing.</label>
+                <label class="option-label"><input type="radio" name="q8" value="C"> I feel an immediate sense of the dream’s core message for their current life.</label>
+                <label class="option-label"><input type="radio" name="q8" value="D"> I listen but don't engage deeply, as I feel dreams are usually just psychological.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">9. You see a news report about a major crisis in another part of the world.</span>
+                <label class="option-label"><input type="radio" name="q9" value="A"> I look for a reputable relief organization to support with a practical donation.</label>
+                <label class="option-label"><input type="radio" name="q9" value="B"> I pray for the local churches and families on the ground in that region.</label>
+                <label class="option-label"><input type="radio" name="q9" value="C"> I feel an intense spiritual burden to intercede for them in a focused, active way.</label>
+                <label class="option-label"><input type="radio" name="q9" value="D"> I feel saddened by the news but move on, feeling there is little I can do personally.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">10. Someone in your life is smiling and acting fine, but you sense they are in deep pain.</span>
+                <label class="option-label"><input type="radio" name="q10" value="A"> I offer them a sincere compliment or a small gift to brighten their day.</label>
+                <label class="option-label"><input type="radio" name="q10" value="B"> I keep a close eye on them, praying that they feel God's presence today.</label>
+                <label class="option-label"><input type="radio" name="q10" value="C"> I gently ask if they are okay and share that I felt a specific concern for them.</label>
+                <label class="option-label"><input type="radio" name="q10" value="D"> I take them at their word and assume they are doing as well as they seem.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">11. You are tasked with leading a new service team at church.</span>
+                <label class="option-label"><input type="radio" name="q11" value="A" required> I start by creating a roster and establishing clear roles and goals.</label>
+                <label class="option-label"><input type="radio" name="q11" value="B"> I spend time in prayer, asking God to bring the right people to the team.</label>
+                <label class="option-label"><input type="radio" name="q11" value="C"> I look for how the Spirit wants to uniquely move through this specific team.</label>
+                <label class="option-label"><input type="radio" name="q11" value="D"> I prefer to be a helper on the team rather than the one in charge.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">12. A "random" thought about a friend you haven't seen in years pops into your mind.</span>
+                <label class="option-label"><input type="radio" name="q12" value="A"> I make a mental note to send them an encouraging text when I have a break.</label>
+                <label class="option-label"><input type="radio" name="q12" value="B"> I stop and pray for them right then, asking God to bless their day.</label>
+                <label class="option-label"><input type="radio" name="q12" value="C"> I text them immediately with the specific detail I was thinking of.</label>
+                <label class="option-label"><input type="radio" name="q12" value="D"> I enjoy the memory but move on with my busy schedule.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">13. You are in a meeting where someone is being subtly manipulative or divisive.</span>
+                <label class="option-label"><input type="radio" name="q13" value="A"> I use my social skills to redirect the conversation back to the task at hand.</label>
+                <label class="option-label"><input type="radio" name="q13" value="B"> I pray for the unity of the group and for the person's heart to change.</label>
+                <label class="option-label"><input type="radio" name="q13" value="C"> I recognize a spiritual influence at work and pray internally for it to be broken.</label>
+                <label class="option-label"><input type="radio" name="q13" value="D"> I feel uncomfortable but stay quiet, hoping the situation resolves itself.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">14. You are reading a passage of Scripture that suddenly "comes alive" for a friend's situation.</span>
+                <label class="option-label"><input type="radio" name="q14" value="A"> I highlight the verse and plan to share it next time I see them.</label>
+                <label class="option-label"><input type="radio" name="q14" value="B"> I pray that the truth of that verse would become real to them this week.</label>
+                <label class="option-label"><input type="radio" name="q14" value="C"> I send it to them right away, trusting it's a timely word from the Spirit.</label>
+                <label class="option-label"><input type="radio" name="q14" value="D"> I enjoy the insight but don't feel it's my place to tell others what to read.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">15. You are in a hospital room visiting someone who is very ill.</span>
+                <label class="option-label"><input type="radio" name="q15" value="A"> I coordinate with the family to make sure their house and pets are cared for.</label>
+                <label class="option-label"><input type="radio" name="q15" value="B"> I sit in quiet "ministry of presence" and pray for the medical staff.</label>
+                <label class="option-label"><input type="radio" name="q15" value="C"> I ask the Spirit if there's an opportunity to pray for a physical shift right now.</label>
+                <label class="option-label"><input type="radio" name="q15" value="D"> I feel helpless in hospital settings and prefer to keep my visit very short.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">16. You feel an unexpected surge of faith for a "mission" or project that seems impossible.</span>
+                <label class="option-label"><input type="radio" name="q16" value="A"> I begin looking into the feasibility and budget needed to make it happen.</label>
+                <label class="option-label"><input type="radio" name="q16" value="B"> I pray for a "sign" to confirm if this idea is truly from God or just my own excitement.</label>
+                <label class="option-label"><input type="radio" name="q16" value="C"> I start acting as if it's already happening, trusting God for the miracle.</label>
+                <label class="option-label"><input type="radio" name="q16" value="D"> I dismiss the feeling as "too big" for someone like me to accomplish.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">17. A stranger in line at the grocery store looks like they've had a tragic day.</span>
+                <label class="option-label"><input type="radio" name="q17" value="A"> I offer a warm smile and perhaps pay for their coffee or a small item.</label>
+                <label class="option-label"><input type="radio" name="q17" value="B"> I pray for them quietly, asking God to meet them in their struggle today.</label>
+                <label class="option-label"><input type="radio" name="q17" value="C"> I feel a nudge to stop them and share an encouraging word I'm sensing.</label>
+                <label class="option-label"><input type="radio" name="q17" value="D"> I focus on my own shopping, respecting their privacy and space.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">18. You are teaching your kids or a friend about God and they ask a very difficult question.</span>
+                <label class="option-label"><input type="radio" name="q18" value="A"> I look up the answer later and send them a link to a helpful resource.</label>
+                <label class="option-label"><input type="radio" name="q18" value="B"> I pray for wisdom to explain it simply and truthfully in that moment.</label>
+                <label class="option-label"><input type="radio" name="q18" value="C"> I find myself explaining it with an unexpected, "heavenly" clarity.</label>
+                <label class="option-label"><input type="radio" name="q18" value="D"> I tell them that some things are just mysteries we aren't meant to know.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">19. You finish a long day of serving at church and feel physically exhausted.</span>
+                <label class="option-label"><input type="radio" name="q19" value="A"> I head home to rest and recharge so I can be ready for the next day.</label>
+                <label class="option-label"><input type="radio" name="q19" value="B"> I spend a few minutes in gratitude, reflecting on what God did today.</label>
+                <label class="option-label"><input type="radio" name="q19" value="C"> I feel a "second wind" of spiritual energy that makes me want to keep going.</label>
+                <label class="option-label"><input type="radio" name="q19" value="D"> I wonder if I over-committed and need to scale back my serving.</label>
+            </div>
+
+            <div class="scenario-block">
+                <span class="scenario-header">20. You are in a small group and someone asks for prayer for a physical healing.</span>
+                <label class="option-label"><input type="radio" name="q20" value="A"> I offer to bring them a meal or help them with errands this week.</label>
+                <label class="option-label"><input type="radio" name="q20" value="B"> I join the group in a prayer of petition, asking God to heal them in His timing.</label>
+                <label class="option-label"><input type="radio" name="q20" value="C"> I feel a surge of faith to pray with authority for an immediate work of God.</label>
+                <label class="option-label"><input type="radio" name="q20" value="D"> I feel uncomfortable with public prayer and prefer to pray for them at home.</label>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="generateResults()">Calculate Activation Profile</button>
+        </form>
+    </div>
+
+    <div id="results-container">
+        <h1 id="user-name-display" style="color:var(--mariners-navy); margin-bottom:0;">Your Activation Profile</h1>
+        <p style="color:#666; margin-top:5px;">Mariners Church Rooted | Generated March 2026</p>
+
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="card-title">Manifestation Flows</div>
+                <div id="manifest-list"></div>
+            </div>
+            <div class="result-card">
+                <div class="card-title">Functional Graces</div>
+                <div id="graces-list"></div>
+            </div>
+        </div>
+
+        <div class="insight-box">
+            <h3 style="margin-top:0; color:var(--mariners-navy);">Strategic Insight</h3>
+            <p id="insight-text"></p>
+            <p><strong>Next Step:</strong> Review these results with your Rooted leader. Your "Flow" indicates how the Spirit is currently nudging you to "Follow, Grow, Serve, and Change."</p>
+        </div>
+        <button onclick="location.reload()" style="margin-top:20px; background:none; border:1px solid #ccc; padding:10px; cursor:pointer; border-radius:5px;">Restart Diagnostic</button>
+    </div>
+</div>
+
+<script>
+    function generateResults() {
+        const form = document.getElementById('activationForm');
+        const formData = new FormData(form);
+        let counts = { A: 0, B: 0, C: 0, D: 0 };
+        let answered = 0;
+
+        for (let entry of formData.values()) {
+            counts[entry]++;
+            answered++;
+        }
+
+        if (answered < 20) {
+            alert("Please answer all 20 questions to get an accurate profile.");
+            return;
+        }
+
+        document.getElementById('quiz-view').style.display = 'none';
+        document.getElementById('results-container').style.display = 'block';
+
+        // Custom weights to make it look like the "Gifted2Serve" logic
+        const manifestData = [
+            { name: "Discernment of Spirits", score: Math.min(100, (counts.C * 12) + 20 + (counts.B * 4)), focus: "Small Group Health" },
+            { name: "Faith & Miracles", score: Math.min(100, (counts.C * 14) + 15), focus: "Fearless Change" },
+            { name: "Tongues & Interpretation", score: Math.min(100, (counts.C * 10) + (counts.B * 5)), focus: "Spiritual Intimacy" }
+        ];
+
+        const graceData = [
+            { name: "Service / Helps", score: Math.min(100, (counts.A * 15) + 10), focus: "Community Support" },
+            { name: "Prophecy & Word of Wisdom", score: Math.min(100, (counts.B * 10) + (counts.C * 8)), focus: "Edification" },
+            { name: "Intercession", score: Math.min(100, (counts.B * 18)), focus: "Body Prayer" }
+        ];
+
+        renderBars('manifest-list', manifestData);
+        renderBars('graces-list', graceData);
+
+        const insight = document.getElementById('insight-text');
+        if (counts.C >= 6) {
+            insight.innerHTML = "You demonstrate a high <strong>'Catalyst Flow.'</strong> Your spiritual instinct is tuned toward the situational power of the Holy Spirit. You are likely moving in gifts that bring immediate spiritual shifts to environments and people.";
+        } else if (counts.B > counts.A) {
+            insight.innerHTML = "You demonstrate a strong <strong>'Watchman Flow.'</strong> You are highly sensitized to the 'nudges' of the Spirit and excel at listening and discerning the spiritual climate before acting.";
+        } else if (counts.A >= counts.B) {
+            insight.innerHTML = "You demonstrate a robust <strong>'Stabilizer Flow.'</strong> Your primary activation is in 'Practical Grace,' turning spiritual convictions into tangible support that keeps the body of Christ healthy.";
+        } else {
+            insight.innerHTML = "You are in a <strong>'Season of Stillness.'</strong> Your responses indicate you are currently observing and learning. This is a vital time to stay 'Open but Cautious' as the Spirit begins to highlight new areas of activation.";
+        }
+        
+        window.scrollTo(0,0);
+    }
+
+    function renderBars(id, data) {
+        const target = document.getElementById(id);
+        target.innerHTML = '';
+        data.forEach(item => {
+            target.innerHTML += `
+                <div class="gift-row">
+                    <div class="gift-label"><span>${item.name}</span> <span>${item.score}%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: ${item.score}%;"></div></div>
+                    <div class="focus-tag">Focus: ${item.focus}</div>
+                </div>
+            `;
+        });
+    }
+</script>
+
+</body>
+</html>
